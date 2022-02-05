@@ -44,16 +44,6 @@ class IotServer {
     }
 }
 
-const sensor = new Sensor('id1');
-sensor.turn('on');
-const server = new IotServer();
-server.start([sensor]);
-server.publish({
-    deviceId: 'id1',
-    actionId: 'CHANGE_REPORTING_INTERVAL',
-    payload: 3000,
-});
-
 module.exports = {
     Sensor,
     IotServer,
